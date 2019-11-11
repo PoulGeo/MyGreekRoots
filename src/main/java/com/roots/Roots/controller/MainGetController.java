@@ -112,8 +112,7 @@ public class MainGetController {
         m.addAttribute("Dbfile", listimages);
         final List<Person> p = rp.showAll(iduser);
         m.addAttribute("Person", p);
-        return "adminseetree" +
-                "";
+        return "adminseetree";
     }
 
     @GetMapping("/seetree")
