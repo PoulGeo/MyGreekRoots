@@ -46,7 +46,6 @@ public class FileController {
     @PostMapping("/uploadMultipleFiles")
     public List<UploadFileResponse> uploadMultipleFiles(@RequestParam("files") MultipartFile[] files,
                                                         @RequestParam("iduser") long iduser) {
-        System.out.println("IDUSER = " + iduser);
 
         return Arrays.stream(files)
                 .map(file -> uploadFile(file, iduser))
@@ -55,7 +54,6 @@ public class FileController {
 
     @GetMapping("/downloadFile/{fileId}")
     public ResponseEntity<Resource> downloadFile(@PathVariable String fileId) {
-        // Load file from database
         Dbfile dbFile = DBFileStorageService.getFile(Long.parseLong(fileId));
 
         return ResponseEntity.ok()

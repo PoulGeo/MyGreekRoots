@@ -1,6 +1,6 @@
 package com.roots.Roots.model;
 
-public class ChatMessage {
+public class  	ChatMessage {
 	private String content;
 	private String sender;
 	private MessageType type;
