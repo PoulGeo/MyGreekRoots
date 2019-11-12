@@ -89,10 +89,10 @@
             <div class="row">
                 <div class="col-md-6 col-xs-12">
                     <div class="form-group">
-                        <input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg" style="margin-left: 100%" tabindex="8">
+                        <input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg" style="margin-left: auto" tabindex="8">
                     </div>
                     <div class="form-group">
-                        <a  href="/upload"  class="btn btn-success btn-block btn-lg" style="margin-left: 100%" tabindex="8">
+                        <a  href="/upload"  class="btn btn-success btn-block btn-lg" style="margin-left: auto" tabindex="8">
                             Upload Documents</a>
                     </div>
                 </div>

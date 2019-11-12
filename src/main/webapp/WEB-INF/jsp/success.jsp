@@ -32,12 +32,13 @@
     }
 
     a{
+        margin-left: 40%;
         font-size: 30px;
         color: white;
     }
 
 
-    h4{
+    h1{
         margin-top: 40px;
         color:green;
         text-align:center;
@@ -54,7 +55,9 @@
 
 <h1>Payment Success</h1>
 
-
+<br>
+<br>
+<br>
 <div class="container">
     <div class="card-deck">
 
