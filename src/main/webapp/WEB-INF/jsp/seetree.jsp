@@ -37,7 +37,10 @@
         }
 
         .navbar-brand {
-            color: black;
+            margin-top: 10px;
+            font-size: 50px;
+            text-align: center;
+
         }
         .p {
             margin-top: 10px;
@@ -60,7 +63,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-transparent">
     <a href="./home" class="navbar-brand">MyGreekRoots</a>
     <form class="form-inline">
         <a href="/home" class="btn btn-outline-success my-2 my-sm-0" type="button">Home</a>
@@ -70,6 +73,7 @@
         <a href="/logout" class="btn btn-outline-success my-2 my-sm-0" type="button">logout</a>
     </form>
 </nav>
+<br>
 
 <p class="p">My Greek Roots</p>
 
@@ -128,7 +132,7 @@
                 <tr>
                     <td>${f.id}</td>
                     <td>${f.filename}</td>
-                    <td><img src="data:image/jpg;base64,${f.base64Image}" width="100" height="100" alt="document"></td>>
+                    <td><img src="data:image/jpg;base64,${f.base64Image}" width="100" height="100" alt="document"></td>
                     <td><a href="${pageContext.request.contextPath}/delete/${f.id}" style="color: red" >Delete</a></td>
                 </tr>
                 </tbody>

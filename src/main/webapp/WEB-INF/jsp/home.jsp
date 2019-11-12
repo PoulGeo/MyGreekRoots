@@ -30,7 +30,6 @@
         margin-top: 10px;
         font-size: 50px;
         text-align: center;
-        color: dimgrey;
 
     }
     .ml14 {
