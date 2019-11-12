@@ -26,13 +26,12 @@
     </script>
 
 
-
     <style>
         body {
             background-color: burlywood;
         }
 
-        .container{
+        .container {
             width: 500px;
         }
 
@@ -42,6 +41,7 @@
             text-align: center;
 
         }
+
         .p {
             margin-top: 10px;
             font-size: 50px;
@@ -49,11 +49,13 @@
             color: dimgrey;
 
         }
-        h5{
+
+        h5 {
             text-align: center;
             color: grey;
         }
-        a{
+
+        a {
             font-size: 30px;
             color: white;
         }
@@ -75,9 +77,11 @@
 </nav>
 <br>
 
-<p class="p">My Greek Roots</p>
 
-    <h5>My Genealogical Tree</h5>
+<br>
+<br>
+<h5>My Genealogical Tree</h5>
+<br>
 <%--    table>(th>tr*5)>(td>tr*5)>--%>
 <form modelAttribute="personUpd" action="showPersons" method="post" enctype="multipart/form-data"
       style="text-align: center;">
@@ -104,66 +108,74 @@
                 <td scope="col">${p.wifedates}</td>
                 <td scope="col">${p.wifeinfo}</td>
                 <td scope="col">${p.siblings}</td>
-                <td scope="col"><a href="${pageContext.request.contextPath}/update/${p.idperson}" style="color: #45a049">Update</a></td>
+                <td scope="col"><a href="${pageContext.request.contextPath}/update/${p.idperson}"
+                                   style="color: #45a049">Update</a></td>
+            </tr>
+            </tbody>
+        </c:forEach>
+
+    </table>
+</form>
+<br>
+<br>
+<br>
+<br>
+
+<h5>My Documents</h5>
+
+
+<br>
+<form modelAttribute="Image" action="showPersons" method="post" enctype="multipart/form-data"
+      style="text-align: center;">
+    <table class="table table-striped table-light" border="1" style="margin: auto; width: 70%;" bgcolor="white">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Image</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <c:forEach items="${Dbfile}" var="f">
+            <tbody>
+            <tr>
+                <td>${f.id}</td>
+                <td>${f.filename}</td>
+                    
+                <td><img src="data:image/jpg;base64,${f.base64Image}" width="100" height="100" alt="document"></td>
+                <td><a href="${pageContext.request.contextPath}/delete/${f.id}" style="color: red">Delete</a></td>
             </tr>
             </tbody>
         </c:forEach>
 
     </table>
     <br>
-
-    <h5>My Documents</h5>
-
-
     <br>
-    <form modelAttribute="Image" action="showPersons" method="post" enctype="multipart/form-data"
-          style="text-align: center;">
-        <table  class="table table-striped table-light" border="1" style="margin: auto; width: 70%;" bgcolor="white">
-            <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Image</th>
-                <th scope="col">Delete</th>
-            </tr>
-            </thead>
-            <c:forEach items="${Dbfile}" var="f">
-                <tbody>
-                <tr>
-                    <td>${f.id}</td>
-                    <td>${f.filename}</td>
-                    <td><img src="data:image/jpg;base64,${f.base64Image}" width="100" height="100" alt="document"></td>
-                    <td><a href="${pageContext.request.contextPath}/delete/${f.id}" style="color: red" >Delete</a></td>
-                </tr>
-                </tbody>
-            </c:forEach>
-
-        </table>
-        <br>
-        <br>
+    <br>
+    <br>
 
 
-        <div class="container">
-            <div class="card-deck">
+    <div class="container">
+        <div class="card-deck">
 
-                <div class="card text-white bg-primary">
-                    <div class="card-body">
-                        <a href="/buildtree" class="card-title">Continue Building</a>
-                    </div>
+            <div class="card text-white bg-primary">
+                <div class="card-body">
+                    <a href="/buildtree" class="card-title">Continue Building</a>
                 </div>
+            </div>
 
-                <div class="card text-white bg-info">
-                    <div class="card-body">
-                        <a href="/upload" class="card-title">Upload Documents</a>
-                    </div>
+            <div class="card text-white bg-info">
+                <div class="card-body">
+                    <a href="/upload" class="card-title">Upload Documents</a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-    </form>
+</form>
 
 </body>
 </html>

@@ -37,10 +37,10 @@
     }
 
     a{
-        font-size: 30px;
+        font-size: 32px;
+        margin-left: 25%;
         color: white;
     }
-
 
     h4{
         margin-top: 40px;
@@ -67,7 +67,7 @@
 <div class="container">
     <div class="card-deck">
 
-        <div class="card text-white bg-primary">
+        <div  class="card text-white bg-primary ">
             <div class="card-body">
                 <a href="/buildtree" class="card-title">Continue Building</a>
             </div>

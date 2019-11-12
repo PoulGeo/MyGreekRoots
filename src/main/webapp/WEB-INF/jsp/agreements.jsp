@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Twister
@@ -36,6 +37,7 @@
         }
 
         a {
+            margin-left: 37%;
             font-size: 30px;
             color: white;
         }
@@ -62,8 +64,8 @@
 
 <fieldset id="f1">
     <h4>Welcome to the Online Genealogy Museum</h4>
-    <h4>Here you can save your findings and you can communicate</h4>
-    <h4>with your relatives to discover more!</h4>
+    <h4>Here you can save your genealogical tree and you can </h4>
+    <h4>communicate with others to discover more ancestors of yours!</h4>
     <br>
     <h5>Follow the steps below to build your own tree</h5>
     <p>Above all our privacy ..... </p>
@@ -71,7 +73,6 @@
 
 <br>
 <br>
-
 
 <div class="container">
     <div class="card-deck">
