@@ -1,4 +1,4 @@
-package com.roots.Roots.exception;
+package com.roots.Roots.file_upload.exception;
 
 public class FileStorageException extends RuntimeException {
     public FileStorageException(String message) {

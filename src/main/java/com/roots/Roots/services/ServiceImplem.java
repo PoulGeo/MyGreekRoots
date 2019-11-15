@@ -1,7 +1,7 @@
 package com.roots.Roots.services;
 
 
-import com.roots.Roots.exception.FileStorageException;
+import com.roots.Roots.file_upload.exception.FileStorageException;
 import com.roots.Roots.model.Admin;
 import com.roots.Roots.model.Dbfile;
 import com.roots.Roots.model.Person;
@@ -52,7 +52,6 @@ public class ServiceImplem implements ServiceS {
     public List<User> showAllUSers() {
         return rs.showAllUSers();
     }
-
 
     @Override
     public User findUserByEmail(String lala) {

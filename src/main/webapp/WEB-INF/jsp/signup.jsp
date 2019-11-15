@@ -74,22 +74,22 @@
                     <div class="col-md-6 col-xs-12">
                         <div class="form-group">
                             <spring:input type="text" path="name" name="name" class="form-control"
-                                          placeholder="First Name"/>
+                                          placeholder="First Name" required="true" />
                         </div>
                     </div>
                     <div class="col-md-6 col-xs-12">
                         <div class="form-group">
                             <spring:input type="text" path="surname" name="surnname" class="form-control"
-                                          placeholder="Last Name"/>
+                                          placeholder="Last Name" required="true"/>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
-                    <spring:input type="email" path="email" name="email" class="form-control" placeholder="Email"/>
+                    <spring:input type="email" path="email" name="email" class="form-control" placeholder="Email" required="true"/>
                 </div>
                 <div class="form-group">
                     <spring:input type="password" name="password" class="form-control" placeholder="Password"
-                                  path="password"/>
+                                  path="password" required="true"/>
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-xs-12">

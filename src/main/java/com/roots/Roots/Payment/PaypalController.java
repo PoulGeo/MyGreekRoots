@@ -36,7 +36,7 @@ public class PaypalController {
 
 			e.printStackTrace();
 		}
-		return "redirect:/seetree";
+		return "redirect:/categories";
 
 
 	}
@@ -62,7 +62,7 @@ public class PaypalController {
 		} catch (PayPalRESTException e) {
 		 System.out.println(e.getMessage());
 		}
-		return "redirect:/";
+		return "redirect:/categories";
 	}
 
 }

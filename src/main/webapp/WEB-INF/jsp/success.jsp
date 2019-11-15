@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>MyGreekRoots</title>
 
 
@@ -21,7 +21,6 @@
     </script>
 
 
-
 </head>
 <body>
 
@@ -31,19 +30,20 @@
 
     }
 
-    a{
+    a {
         margin-left: 40%;
         font-size: 30px;
         color: white;
     }
 
 
-    h1{
+    h1 {
         margin-top: 40px;
-        color:green;
-        text-align:center;
+        color: green;
+        text-align: center;
     }
-    .p{
+
+    .p {
         margin-top: 50px;
         font-size: 50px;
         text-align: center;
@@ -60,12 +60,7 @@
 <br>
 <div class="container">
     <div class="card-deck">
-
-        <div class="card text-white bg-primary">
-            <div class="card-body">
-                <a href="/buildtree" class="card-title">Continue Building</a>
-            </div>
-        </div>
+        <a href="/buildtree" class="card text-white bg-primary card-body card-title">Continue Building</a>
     </div>
 </div>
 

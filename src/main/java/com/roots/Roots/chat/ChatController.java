@@ -1,4 +1,4 @@
-package com.roots.Roots.controller;
+package com.roots.Roots.chat;
 
 import com.roots.Roots.model.ChatMessage;
 import com.roots.Roots.model.User;

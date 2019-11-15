@@ -1,12 +1,8 @@
 package com.roots.Roots.model;
 
-import lombok.Data;
-import lombok.ToString;
-
 import javax.persistence.*;
 
 @Entity
-@Data
 public class Person {
 
   @Id
@@ -25,26 +21,10 @@ public class Person {
   @Column
   private String wifeinfo;
   @Column
-  private String siblings;
-  @Column
   private long userid;
+  @Column
+  private String siblings;
 
-
-  public String getSiblings() {
-    return siblings;
-  }
-
-  public void setSiblings(String siblings) {
-    this.siblings = siblings;
-  }
-
-  public long getUserid() {
-    return userid;
-  }
-
-  public void setUserid(long userid) {
-    this.userid = userid;
-  }
 
   public long getIdperson() {
     return idperson;
@@ -106,6 +86,24 @@ public class Person {
 
   public void setWifeinfo(String wifeinfo) {
     this.wifeinfo = wifeinfo;
+  }
+
+
+  public long getUserid() {
+    return userid;
+  }
+
+  public void setUserid(long userid) {
+    this.userid = userid;
+  }
+
+
+  public String getSiblings() {
+    return siblings;
+  }
+
+  public void setSiblings(String siblings) {
+    this.siblings = siblings;
   }
 
 }

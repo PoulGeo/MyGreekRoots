@@ -1,4 +1,4 @@
-package com.roots.Roots.controller;
+package com.roots.Roots.file_upload;
 
 import com.roots.Roots.model.Dbfile;
 import com.roots.Roots.payload.UploadFileResponse;

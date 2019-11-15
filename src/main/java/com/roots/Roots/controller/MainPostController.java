@@ -43,21 +43,13 @@ public class MainPostController {
 
     @PostMapping("/dologin")
     public String dologin(@RequestParam("email") String email,
-                          @RequestParam("password") String password, HttpSession session,
-                          Person p) {
+                          @RequestParam("password") String password, HttpSession session) {
 
         User u = si.findUserByEmail(email);
 
         if (u == null) {
             return "login";
         }
-
-        p.setIdperson(u.getIduser());
-        p.setName(u.getName());
-        p.setUserid(u.getIduser());
-
-
-        si.insertPersonToDB(p);
 
         session.setAttribute("user", u);
 

@@ -44,7 +44,7 @@
             font-weight: 500;
             padding: 20px;
             height: 150px;
-            text-decoration: none;
+            text-decoration: none !important;
             text-transform: capitalize;
 
 

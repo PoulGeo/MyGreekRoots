@@ -37,7 +37,7 @@
         }
 
         a {
-            margin-left: 37%;
+            text-align: center;
             font-size: 30px;
             color: white;
         }
@@ -67,25 +67,15 @@
     <h4>Here you can save your genealogical tree and you can </h4>
     <h4>communicate with others to discover more ancestors of yours!</h4>
     <br>
-    <h5>Follow the steps below to build your own tree</h5>
-    <p>Above all our privacy ..... </p>
+    <p>Read the company policy (...)</p>
 </fieldset>
-
 <br>
 <br>
-
 <div class="container">
     <div class="card-deck">
-
-        <div class="card text-white bg-primary">
-            <div class="card-body">
-                <a href="/book" class="card-title">Accept and continue</a>
-            </div>
-        </div>
+        <a href="/book" class="card text-white bg-primary card-body card-title">Accept and continue</a>
     </div>
 </div>
-
-
 <br>
 <br>
 

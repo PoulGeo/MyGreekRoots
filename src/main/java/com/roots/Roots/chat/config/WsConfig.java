@@ -1,4 +1,4 @@
-package com.roots.Roots.config;
+package com.roots.Roots.chat.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
@@ -12,7 +12,7 @@ public class WsConfig implements WebSocketMessageBrokerConfigurer {
 
 	@Override
 	public void registerStompEndpoints(StompEndpointRegistry registry) {
-		registry.addEndpoint("/javatechie").withSockJS();
+		registry.addEndpoint("/roots").withSockJS();
 	}
 	
 	@Override

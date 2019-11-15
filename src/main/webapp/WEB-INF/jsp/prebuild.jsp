@@ -24,8 +24,6 @@
     </script>
 
 
-
-
 </head>
 
 <body>
@@ -36,48 +34,39 @@
 
     }
 
-    a{
+    .big-button {
+        text-decoration: none !important;
+    }
+
+    a {
         font-size: 32px;
         margin-left: 25%;
         color: white;
     }
 
-    h4{
+    h4 {
         margin-top: 40px;
-        color:green;
-        text-align:center;
+        color: green;
+        text-align: center;
     }
- .p{
-            margin-top: 50px;
-            font-size: 50px;
-            text-align: center;
-            color: dimgrey;
 
-        }
+    .p {
+        margin-top: 50px;
+        font-size: 50px;
+        text-align: center;
+        color: dimgrey;
+
+    }
 
 </style>
 
 <p class="p">My Greek Roots</p>
-
-
 <br>
 <br>
-
-
 <div class="container">
     <div class="card-deck">
-
-        <div  class="card text-white bg-primary ">
-            <div class="card-body">
-                <a href="/buildtree" class="card-title">Continue Building</a>
-            </div>
-        </div>
-
-        <div class="card text-white bg-info">
-            <div class="card-body">
-                <a href="/seetree" class="card-title">Show my tree</a>
-            </div>
-        </div>
+        <a href="/buildtree" class="card text-white text-center bg-primary card-body card-title big-button">Continue Building</a>
+        <a href="/seetree" class="card text-white text-center bg-info card-body card-title big-button">Show my tree</a>
     </div>
 </div>
 </body>

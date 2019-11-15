@@ -91,8 +91,9 @@ public class MainGetController {
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable long id){
         rf.deleteById(id);
-        return "forward:/seetree";
+        return "redirect:/seetree";
     }
+
 
     @GetMapping("/update/{idperson}")
     public String update(ModelMap m, @PathVariable long idperson) {
@@ -115,10 +116,12 @@ public class MainGetController {
         return "adminseetree";
     }
 
+
+
     @GetMapping("/seetree")
     public String seetreePage(ModelMap m, HttpSession session) {
         User u = (User) session.getAttribute("user");
-        if (u == null) {
+        if (u == null ) {
             return "redirect:/login";
         }
 
@@ -130,6 +133,7 @@ public class MainGetController {
 
         return "seetree";
     }
+
 
     @GetMapping("/adminseeuser")
     public String seeusers(ModelMap m) {

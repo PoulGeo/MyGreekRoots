@@ -17,6 +17,16 @@
             background-color: burlywood;
 
         }
+
+        .logo{
+            width: 500px;
+            height: 500px;
+
+        }
+        .book{
+            width: 400px;
+            height: 600px;
+        }
         .table{
             display: block;
             margin-left: auto;
@@ -181,6 +191,7 @@
     <form class="form-inline">
         <a href="/home" class="btn btn-outline-success my-2 my-sm-0" type="button">Home</a>
         <a href="/aboutus" class="btn btn-outline-success my-2 my-sm-0" type="button">About Us</a>
+        <a href="/search" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</a>
         <a href="/seetree" class="btn btn-outline-success my-2 my-sm-0" type="button">My Tree</a>
         <a href="/chat" class="btn btn-outline-success my-2 my-sm-0" type="button">Chat</a>
         <a href="/logout" class="btn btn-outline-success my-2 my-sm-0" type="button">logout</a>
@@ -262,6 +273,13 @@
         </div>
         <br>
         <br>
+
+        <img class="book" src="https://www.oirizes.gr/wp-content/uploads/2017/12/%CE%92%CE%B9%CE%B2%CE%BB%CE%AF%CE%BF--773x1024.jpg"
+             alt="book">
+
+        <br>
+        <br>
+
         <div class="has-animation animation-ltr" data-delay="1000">
             <p class="bigger">Occupation</p>
         </div>
@@ -285,6 +303,10 @@
 
 
     </div>
+
+    <img class="logo" src="https://www.oirizes.gr/wp-content/uploads/2017/12/logo_new_2018.png" alt="label">
+
+
     <script>
         $(document).ready(function () {
             $('.has-animation').each(function (index) {
@@ -295,6 +317,7 @@
         });
 
     </script>
+
 
 </body>
 </html>

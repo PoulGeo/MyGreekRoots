@@ -74,7 +74,7 @@
         font-weight: 500;
         padding: 20px;
         height: 150px;
-        text-decoration: none;
+        text-decoration: none !important;
         text-transform: capitalize;
 
 
@@ -109,6 +109,7 @@
     <form class="form-inline">
         <a href="/home" class="btn btn-outline-success my-2 my-sm-0" type="button">Home</a>
         <a href="/aboutus" class="btn btn-outline-success my-2 my-sm-0" type="button">About Us</a>
+        <a href="/search" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</a>
         <a href="/seetree" class="btn btn-outline-success my-2 my-sm-0" type="button">My Tree</a>
         <a href="/chat" class="btn btn-outline-success my-2 my-sm-0" type="button">Chat</a>
         <a href="/logout" class="btn btn-outline-success my-2 my-sm-0" type="button">logout</a>
@@ -137,6 +138,19 @@
 
 <p class="ml14">
   <span class="text-wrapper">
+    <span class="letters"> You can chat with other users in order to share information <br> everything else you would find interesting about the genealogy!</span>
+    <span class="line"></span>
+  </span>
+</p>
+
+<div class="container" align="center">
+    <a href="/chat" class="big-button" data-action="submit">
+        Chat Now
+    </a>
+</div>
+
+<p class="ml14">
+  <span class="text-wrapper">
     <span class="letters">You can build your genealogical tree <br> by adding your ancestors with their wife and sibings <br> and by uploading documents in order to help other people <br> for their own research</span>
     <span class="line"></span>
   </span>
@@ -148,18 +162,7 @@
     </a>
 </div>
 
-<p class="ml14">
-  <span class="text-wrapper">
-    <span class="letters"> You can chat with other users in order to share information <br> everything else you would find interesting about the genealogy!</span>
-    <span class="line"></span>
-  </span>
-</p>
 
-<div class="container" align="center">
-    <a href="/chat" class="big-button" data-action="submit">
-        Chat Now
-    </a>
-</div>
 <br>
 <br>
 

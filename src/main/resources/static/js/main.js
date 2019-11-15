@@ -23,12 +23,13 @@ function connect(event) {
         usernamePage.classList.add('hidden');
         chatPage.classList.remove('hidden');
 
-        var socket = new SockJS('/javatechie');
+        var socket = new SockJS('/roots');
         stompClient = Stomp.over(socket);
 
         stompClient.connect({}, onConnected, onError);
     }
     event.preventDefault();
+
 }
 
 
