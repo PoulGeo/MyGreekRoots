@@ -9,12 +9,14 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 
 @Controller
@@ -106,4 +108,20 @@ public class MainPostController {
         si.update(personUpd);
         return "redirect:/seetree";
     }
+
+    @PostMapping("/searchSurname")
+    public String showuser(ModelMap m, @RequestParam("surname") String surname, HttpSession session) {
+
+        List<User> u = si.showUserBySurname(surname);
+        System.out.println(u.toString());
+        System.out.println("surname   " + surname);
+
+        m.addAttribute("User", u);
+        if (u.size() == 0) {
+            return "search-fail";
+        }
+        return "search-outcome";
+    }
+
+
 }

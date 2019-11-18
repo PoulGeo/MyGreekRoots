@@ -13,6 +13,9 @@ public interface Repo extends CrudRepository<User, Long> {
     @Query(value= "select u from User u where u.email=?1")
     User findUserByEmail(String lala);
 
+    @Query("select u from User u where u.surname= ?1")
+    List<User> showUserBySurname(String surname);
+
     @Query(value= "Select u from User u")
     List<User> showAllUSers();
 

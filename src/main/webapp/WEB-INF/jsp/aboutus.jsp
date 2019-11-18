@@ -218,59 +218,30 @@
             <div class="notice notice-danger">
                 The journey with the archives started at 1980, as a hobby. <br>
                 The constant discovery in the written sources was transformed into great love and passion about this
-                occupation.
-            </div>
+                occupation. <br>
+            The first station was the book called -Petrina since 17th century (1989)-, which is a tribute to my
+            birthplace.
+            <br>
+            This book includes all the family genealogical trees and history of the residents of this village from 1633
+            until 1989. <br>
+
+            The second station was the recognition of my work by the Neohellenic Research Center, <br>
+            with a first "Private contract for a project" (1993), with an upward and profitable course. <br>
+
+            The third station was in 1994 when OI RIZES were born. <br>
+            The research has gradually emerged as an independent business, unique in Greece. <br>
+
+            Since then, each new assignment is a new station! <br>
+            The journey is keep going on!
+            Our Office, based on the irrefutable evidence of the research, <br>
+            attract the interest of many people in Greece and abroad, giving value and prestige to every search. <br>
+            The Founder Aris Poulimenakos
+
+
+        </div>
             </p>
         </div>
-        <br>
-        <br>
-        <div class="has-animation animation-rtl" data-delay="2000">
-            <div class="notice notice-danger">
-                The first station was the book called -Petrina since 17th century (1989)-, which is a tribute to my
-                birthplace.
-                <br>
-                This book includes all the family genealogical trees and history of the residents of this village from 1633
-                until 1989.
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="has-animation animation-rtl" data-delay="2100">
-            <div class="notice notice-danger">
-                The second station was the recognition of my work by the Neohellenic Research Center, <br>
-                with a first "Private contract for a project" (1993), with an upward and profitable course.
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="has-animation animation-rtl" data-delay="2200">
-            <div class="notice notice-danger">
-                The third station was in 1994 when OI RIZES were born. <br>
-                The research has gradually emerged as an independent business, unique in Greece.
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="has-animation animation-rtl" data-delay="2300">
-            <div class="notice notice-danger">
-                Since then, each new assignment is a new station! <br>
-                The journey is keep going on!
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="has-animation animation-rtl" data-delay="2400">
-            <div class="notice notice-danger">Our Office, based on the irrefutable evidence of the research, <br>
-                attract the interest of many people in Greece and abroad, giving value and prestige to every search.
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="has-animation animation-rtl" data-delay="2500">
-            <div class="notice notice-sm">
-                The Founder Aris Poulimenakos
-            </div>
-        </div>
+
         <br>
         <br>
 
@@ -280,13 +251,13 @@
         <br>
         <br>
 
-        <div class="has-animation animation-ltr" data-delay="1000">
+<%--        <div class="has-animation animation-ltr" data-delay="1000">--%>
             <p class="bigger">Occupation</p>
-        </div>
+<%--        </div>--%>
         <br>
         <br>
 
-        <div class="has-animation animation-rtl" data-delay="2600">
+<%--        <div class="has-animation animation-rtl" data-delay="2600">--%>
             <div class="notice notice-danger">
                 <ul>
                     <li> Family's historical data (ancestors)</li>
@@ -298,7 +269,7 @@
                     <li> Old property titles, concessions from 1827 to 1913</li>
                 </ul>
             </div>
-        </div>
+<%--        </div>--%>
 
 
 

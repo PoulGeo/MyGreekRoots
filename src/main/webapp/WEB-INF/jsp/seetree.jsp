@@ -30,6 +30,9 @@
         body {
             background-color: burlywood;
         }
+        .big-button {
+            text-decoration: none !important;
+        }
 
         .container {
             width: 500px;
@@ -164,8 +167,8 @@
 
     <div class="container">
         <div class="card-deck">
-            <a href="/buildtree" class="card text-white bg-primary card-body card-title">Continue Building</a>
-            <a href="/upload" class="card text-white bg-info card-body card-title">Upload Documents</a>
+            <a href="/buildtree" class="card text-white bg-primary card-body card-title big-button" >Continue Building</a>
+            <a href="/upload" class="card text-white bg-info card-body card-title big-button">Upload Documents</a>
         </div>
     </div>
 

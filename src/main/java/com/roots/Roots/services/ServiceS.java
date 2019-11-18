@@ -13,6 +13,8 @@ public interface ServiceS {
         void insertUserToDB(User u);
         Person insertPersonToDB(Person p);
         List<User> showAllUSers();
+        List<User> showUserBySurname(String surname);
+        List<Person> showUserBySurnamePerson(String surname);
         User findUserByEmail(String lala);
         Admin findAdminByEmail(String lala);
         Person findPersonById(long id);

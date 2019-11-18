@@ -83,20 +83,7 @@
         </c:forEach>
 
     </table>
-    <br>
-    <br>
 
-
-    <div class="container">
-        <div class="card-deck">
-
-            <div class="card text-white bg-primary">
-                <div class="card-body">
-                    <a class="a" href="./buildtree" class="card-title">Continue Building</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
 </form>
 

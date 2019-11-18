@@ -54,6 +54,16 @@ public class ServiceImplem implements ServiceS {
     }
 
     @Override
+    public List<User> showUserBySurname(String surname) {
+        return rs.showUserBySurname(surname);
+    }
+
+    @Override
+    public List<Person> showUserBySurnamePerson(String surname) {
+        return rp.showUserBySurname(surname);
+    }
+
+    @Override
     public User findUserByEmail(String lala) {
         return rs.findUserByEmail(lala);
     }

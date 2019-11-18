@@ -1,6 +1,7 @@
 package com.roots.Roots.repository;
 
 import com.roots.Roots.model.Person;
+import com.roots.Roots.model.User;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -15,6 +16,8 @@ public interface RepoPerson extends CrudRepository<Person, Long> {
 
     @Query(value = "SELECT p.idperson FROM person p ORDER BY 1 desc limit 1", nativeQuery=true)
     public long findLastInsertedID();
+    @Query("select p from Person p where p.name= :surname")
+    List<Person> showUserBySurname(String surname);
 
     @Query(value = "SELECT * FROM person p JOIN user u ON p.userid = u.iduser WHERE u.iduser = :iduser ", nativeQuery = true)
     public List<Person> showAll(long iduser);

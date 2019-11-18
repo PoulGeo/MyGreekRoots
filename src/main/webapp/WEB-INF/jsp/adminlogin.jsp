@@ -75,7 +75,6 @@
             <input type="password" class="form-control" name="password" placeholder="Password" required="required">
         </div>
         <div class="form-group clearfix">
-            <label class="checkbox-inline pull-left"><input type="checkbox"> Remember me</label>
             <button type="submit" class="btn btn-primary pull-right">Log in</button>
         </div>
     </form>

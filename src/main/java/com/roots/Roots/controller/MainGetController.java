@@ -16,6 +16,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
+import javax.annotation.security.PermitAll;
 import javax.servlet.http.HttpSession;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -41,6 +42,30 @@ public class MainGetController {
     public String homePage(){
         return "home";
     }
+
+    @GetMapping("/search")
+    public String search(){
+        return "search";
+    }
+
+    @GetMapping("/search-fail")
+    public String searchfail(){
+        return "search-fail";
+    }
+
+
+    @GetMapping("/search/{iduser}")
+    public String gouser(ModelMap m, @PathVariable long iduser, HttpSession session) {
+
+        session.invalidate();
+        List<Dbfile> listimages = rf.showAllImages(iduser);
+        m.addAttribute("Dbfile", listimages);
+        final List<Person> p = rp.showAll(iduser);
+        m.addAttribute("Person", p);
+        return "seetree";
+    }
+
+
 
 
     @GetMapping("/login")
@@ -96,7 +121,11 @@ public class MainGetController {
 
 
     @GetMapping("/update/{idperson}")
-    public String update(ModelMap m, @PathVariable long idperson) {
+    public String update(ModelMap m, @PathVariable long idperson, HttpSession session) {
+        User u = (User) session.getAttribute("user");
+        if (u == null ) {
+            return "redirect:/login";
+        }
         final Optional<Person> p = rp.findById(idperson);
         m.addAttribute("personUpd", p.orElse(new Person()));
         return "update";
@@ -108,7 +137,6 @@ public class MainGetController {
         if (a == null) {
             return "redirect:/loulis";
         }
-
         List<Dbfile> listimages = rf.showAllImages(iduser);
         m.addAttribute("Dbfile", listimages);
         final List<Person> p = rp.showAll(iduser);
@@ -124,8 +152,6 @@ public class MainGetController {
         if (u == null ) {
             return "redirect:/login";
         }
-
-
         List<Person> list = rp.showAll(u.getIduser());
         List<Dbfile> listimages = rf.showAllImages(u.getIduser());
         m.addAttribute("Person", list);
@@ -135,9 +161,14 @@ public class MainGetController {
     }
 
 
-    @GetMapping("/adminseeuser")
-    public String seeusers(ModelMap m) {
 
+
+    @GetMapping("/adminseeuser")
+    public String seeusers(ModelMap m, HttpSession session) {
+        Admin a = (Admin) session.getAttribute("admin");
+        if (a == null) {
+            return "redirect:/loulis";
+        }
         List<User> list = ru.showAllUSers();
         m.addAttribute("User", list);
         return "adminseeuser";
