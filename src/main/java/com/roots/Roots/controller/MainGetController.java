@@ -57,7 +57,6 @@ public class MainGetController {
     @GetMapping("/search/{iduser}")
     public String gouser(ModelMap m, @PathVariable long iduser, HttpSession session) {
 
-        session.invalidate();
         List<Dbfile> listimages = rf.showAllImages(iduser);
         m.addAttribute("Dbfile", listimages);
         final List<Person> p = rp.showAll(iduser);
