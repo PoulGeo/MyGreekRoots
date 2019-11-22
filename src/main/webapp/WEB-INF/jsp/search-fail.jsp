@@ -24,7 +24,7 @@
         }
 
         img{
-            margin-left: 38%;
+            margin-left: 460px;
         }
 
         h5 {

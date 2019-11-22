@@ -16,9 +16,10 @@
 
     <style>
         body {
-            background-color: burlywood;
+            background-image: url("https://www.discovergreece.com/~/media/images/highlight-large-images/az/a/athens-city/acropolis-and-the-parthenon-at-night.ashx");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
-
         .register-form {
             margin: 50px auto;
             padding: 25px 20px;

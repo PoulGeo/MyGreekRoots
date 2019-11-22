@@ -9,19 +9,14 @@ import com.roots.Roots.repository.DBFileRepository;
 import com.roots.Roots.repository.Repo;
 import com.roots.Roots.repository.RepoPerson;
 import com.roots.Roots.services.ServiceS;
-import org.apache.tomcat.util.http.fileupload.IOUtils;
+import com.sun.xml.internal.ws.resources.HttpserverMessages;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import javax.annotation.security.PermitAll;
 import javax.servlet.http.HttpSession;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.List;
 import java.util.Optional;
 
@@ -61,7 +56,7 @@ public class MainGetController {
         m.addAttribute("Dbfile", listimages);
         final List<Person> p = rp.showAll(iduser);
         m.addAttribute("Person", p);
-        return "seetree";
+        return "searchTree";
     }
 
 
@@ -95,6 +90,12 @@ public class MainGetController {
 
     @GetMapping("/agreements")
     public String agreementsPage(ModelMap m, HttpSession session) {
+        User u = (User) session.getAttribute("user");
+
+        if (u == null ) {
+            return "redirect:/login";
+        }
+
         return "agreements";
     }
 
@@ -105,7 +106,13 @@ public class MainGetController {
     }
 
     @GetMapping("/buildtree")
-    public String buildtreePage(ModelMap m) {
+    public String buildtreePage(ModelMap m, HttpSession session) {
+
+        User u = (User) session.getAttribute("user");
+
+        if (u == null ) {
+            return "redirect:/login";
+        }
 
         m.addAttribute("person", new Person());
 

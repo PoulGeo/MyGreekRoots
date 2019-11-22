@@ -6,8 +6,8 @@
     <title>MyGreekRoots Chat</title>
     <link rel="stylesheet" href="/css/main.css" />
 </head>
-<body background="18.jpg"
-      style="background-position: center; background-repeat: no-repeat; background-size: cover;">
+<body
+      style="background-color: burlywood">
 <noscript>
     <h2>Sorry! Your browser doesn't support Javascript, you have to enable it!</h2>
 </noscript>
@@ -44,7 +44,7 @@
                            autocomplete="off" class="form-control" />
                     <button type="submit" class="primary">Send</button>
                     <br>
-                    <a href="/home" style="border: none">Exit</a>
+                    <a href="/home" class="form-control" style=" border: 1px black solid; font-size: 17px; color: white; background-color: mediumseagreen; padding: 0.5%; margin-left: 90%;" >Exit</a>
 
                 </div>
             </div>

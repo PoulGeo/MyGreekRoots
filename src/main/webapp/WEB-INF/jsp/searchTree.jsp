@@ -79,7 +79,7 @@
         <a href="/home" class="btn btn-outline-success my-2 my-sm-0" type="button">Home</a>
         <a href="/aboutus" class="btn btn-outline-success my-2 my-sm-0" type="button">About Us</a>
         <a href="/search" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</a>
-        <a href="/seetree" class="btn btn-outline-success my-2 my-sm-0" type="button" style="background: green; color: black">My Tree</a>
+        <a href="/seetree" class="btn btn-outline-success my-2 my-sm-0" type="button" >My Tree</a>
         <a href="/chat" class="btn btn-outline-success my-2 my-sm-0" type="button">Chat</a>
         <a href="/logout" class="btn btn-outline-success my-2 my-sm-0" type="button">logout</a>
     </form>
@@ -89,10 +89,7 @@
 
 <br>
 <br>
-<p>Genealogical Tree of</p>
-<p>${user.name} ${user.surname}</p>
-<br>
-<br>
+
 <%--    table>(th>tr*5)>(td>tr*5)>--%>
 <form modelAttribute="personUpd" action="showPersons" method="post" enctype="multipart/form-data"
       style="text-align: center;">
@@ -106,7 +103,6 @@
             <th>Wife Dates</th>
             <th style="background-color: darkgrey">Wife Info</th>
             <th>Siblings</th>
-            <th style="background-color: darkgrey">Update</th>
         </tr>
         </thead>
         <c:forEach items="${Person}" var="p">
@@ -114,67 +110,12 @@
             <tr>
                 <td scope="col">${p.name}</td>
                 <td style="background-color: darkgrey" scope="col">${p.dates}</td>
-
-                <td scope="col">
-                    <c:if test="${not empty p.info}">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-${p.idperson}">
-                        ReadMore
-                    </button>
-                    <div class="modal fade" id="modal-${p.idperson}" tabindex="-1" role="dialog"  aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">More Info</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    ${p.info}
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </c:if>
-
-                </td>
-
+                <td scope="col">${p.info}</td>
                 <td style="background-color: darkgrey" scope="col">${p.wife}</td>
                 <td scope="col">${p.wifedates}</td>
-
-                <td style="background-color: darkgrey" scope="col">
-                    <c:if test="${not empty p.wifeinfo}">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1-${p.idperson}">
-                            ReadMore
-                        </button>
-                        <div class="modal fade" id="modal1-${p.idperson}" tabindex="-1" role="dialog"  aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">More Info</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                            ${p.wifeinfo}
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </c:if>
-
-                </td>
+                <td style="background-color: darkgrey" scope="col">${p.wifeinfo}</td>
                 <td scope="col">${p.siblings}</td>
-                <td style="background-color: darkgrey" scope="col">
-                    <a href="${pageContext.request.contextPath}/update/${p.idperson}">
-                    <img src="edit.jpg" alt="update"></a></td>
+
             </tr>
             </tbody>
         </c:forEach>
@@ -197,7 +138,6 @@
         <tr>
             <th scope="col">Name</th>
             <th scope="col">Image</th>
-            <th scope="col">Delete</th>
         </tr>
         </thead>
         <c:forEach items="${Dbfile}" var="f">
@@ -206,24 +146,11 @@
                 <td>${f.filename}</td>
                     
                 <td><img src="data:image/jpg;base64,${f.base64Image}" width="100" height="100" alt="document"></td>
-                <td><a href="${pageContext.request.contextPath}/delete/${f.id}" style="color: red"><img src="delete.jpg" alt="delete"></a></td>
             </tr>
             </tbody>
         </c:forEach>
 
     </table>
-    <br>
-    <br>
-    <br>
-    <br>
-
-
-    <div class="container">
-        <div class="card-deck">
-            <a href="/buildtree" class="card text-white bg-primary card-body card-title big-button" >Continue Building</a>
-            <a href="/upload" class="card text-white bg-info card-body card-title big-button">Upload Documents</a>
-        </div>
-    </div>
 
     <br>
     <br>

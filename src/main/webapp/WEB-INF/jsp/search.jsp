@@ -25,7 +25,9 @@
 
     <style type="text/css">
         body {
-            background-color: burlywood;
+            background-image: url("https://pixnio.com/free-images/2017/07/24/2017-07-24-08-37-27-900x488.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .bslf {
@@ -94,7 +96,7 @@
     <form class="form-inline">
         <a href="/home" class="btn btn-outline-success my-2 my-sm-0" type="button">Home</a>
         <a href="/aboutus" class="btn btn-outline-success my-2 my-sm-0" type="button">About Us</a>
-        <a href="/search" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</a>
+        <a href="/search" class="btn btn-outline-success my-2 my-sm-0" style="background: green; color: black" type="button">Search</a>
         <a href="/seetree" class="btn btn-outline-success my-2 my-sm-0" type="button">My Tree</a>
         <a href="/chat" class="btn btn-outline-success my-2 my-sm-0" type="button">Chat</a>
         <a href="/logout" class="btn btn-outline-success my-2 my-sm-0" type="button">logout</a>

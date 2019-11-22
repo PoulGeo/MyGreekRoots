@@ -14,7 +14,15 @@
 
     <style>
         body{
-            background-color: burlywood;
+            background-image: url("https://www.oirizes.gr/wp-content/uploads/2017/12/background.png");
+            /* Full height */
+            height: 100%;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
 
         }
 
@@ -182,6 +190,12 @@
             border: 1px solid mediumseagreen;
             padding: 30px;
         }
+        .notice{
+            background: whitesmoke;
+        }
+        .bigger{
+            background: whitesmoke;
+        }
     </style>
 </head>
 <body>
@@ -190,7 +204,7 @@
     <a href="./home" class="navbar-brand">MyGreekRoots</a>
     <form class="form-inline">
         <a href="/home" class="btn btn-outline-success my-2 my-sm-0" type="button">Home</a>
-        <a href="/aboutus" class="btn btn-outline-success my-2 my-sm-0" type="button">About Us</a>
+        <a href="/aboutus" class="btn btn-outline-success my-2 my-sm-0" style="background: green; color: black" type="button">About Us</a>
         <a href="/search" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</a>
         <a href="/seetree" class="btn btn-outline-success my-2 my-sm-0" type="button">My Tree</a>
         <a href="/chat" class="btn btn-outline-success my-2 my-sm-0" type="button">Chat</a>
@@ -210,6 +224,7 @@
     </div>
 
 
+    <br>
     <br>
     <div class="container">
 

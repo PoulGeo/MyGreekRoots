@@ -22,7 +22,18 @@
     @import url(https://fonts.googleapis.com/css?family=Sansita+One);
 
     body {
-        background-color: burlywood;
+
+        background-image: url("https://www.oirizes.gr/wp-content/uploads/2017/12/background.png");
+        /* Full height */
+        height: 100%;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+
         font-size: 20px;
     }
 
@@ -41,6 +52,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background: whitesmoke;
+
     }
 
     .ml14 .text-wrapper {
@@ -99,15 +112,12 @@
         top: 10px;
     }
 
-
-
-
 </style>
 
 <nav class="navbar navbar-light bg-transparent">
     <a href="./home" class="navbar-brand">MyGreekRoots</a>
     <form class="form-inline">
-        <a href="/home" class="btn btn-outline-success my-2 my-sm-0" type="button">Home</a>
+        <a href="/home" class="btn btn-outline-success my-2 my-sm-0" style="background: green; color: black" type="button">Home</a>
         <a href="/aboutus" class="btn btn-outline-success my-2 my-sm-0" type="button">About Us</a>
         <a href="/search" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</a>
         <a href="/seetree" class="btn btn-outline-success my-2 my-sm-0" type="button">My Tree</a>

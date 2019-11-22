@@ -86,7 +86,7 @@
                     <td>${u.name}</td>
                     <td>${u.surname}</td>
                     <td>${u.email}</td>
-                    <td style="background-color: lightskyblue; font-weight: bold;"><a href="${pageContext.request.contextPath}/search/${u.iduser}">Discover</a></td>
+                    <td style="background-color: lightskyblue; font-weight: bold;"><a href="${pageContext.request.contextPath}/search/${u.iduser}"><img src="view.jpg" alt="view"></a></td>
                 </tr>
                 </tbody>
             </c:forEach>

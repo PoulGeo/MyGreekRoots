@@ -15,7 +15,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
         body {
-            background-color: burlywood;
+            background-image: url("https://www.discovergreece.com/~/media/images/highlight-large-images/az/a/athens-city/acropolis-and-the-parthenon-at-night.ashx");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         .bslf {
