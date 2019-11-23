@@ -30,6 +30,7 @@
         body {
             background-color: burlywood;
         }
+
         .big-button {
             text-decoration: none !important;
         }
@@ -37,7 +38,8 @@
         .container {
             width: 500px;
         }
-        .navbar{
+
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -79,7 +81,8 @@
         <a href="/home" class="btn btn-outline-success my-2 my-sm-0" type="button">Home</a>
         <a href="/aboutus" class="btn btn-outline-success my-2 my-sm-0" type="button">About Us</a>
         <a href="/search" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</a>
-        <a href="/seetree" class="btn btn-outline-success my-2 my-sm-0" type="button" style="background: green; color: black">My Tree</a>
+        <a href="/seetree" class="btn btn-outline-success my-2 my-sm-0" type="button"
+           style="background: green; color: black">My Tree</a>
         <a href="/chat" class="btn btn-outline-success my-2 my-sm-0" type="button">Chat</a>
         <a href="/logout" class="btn btn-outline-success my-2 my-sm-0" type="button">logout</a>
     </form>
@@ -117,27 +120,29 @@
 
                 <td scope="col">
                     <c:if test="${not empty p.info}">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-${p.idperson}">
-                        ReadMore
-                    </button>
-                    <div class="modal fade" id="modal-${p.idperson}" tabindex="-1" role="dialog"  aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">More Info</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    ${p.info}
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modal-${p.idperson}">
+                            ReadMore
+                        </button>
+                        <div class="modal fade" id="modal-${p.idperson}" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">More Info</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                            ${p.info}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </c:if>
 
                 </td>
@@ -147,10 +152,12 @@
 
                 <td style="background-color: darkgrey" scope="col">
                     <c:if test="${not empty p.wifeinfo}">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal1-${p.idperson}">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modal1-${p.idperson}">
                             ReadMore
                         </button>
-                        <div class="modal fade" id="modal1-${p.idperson}" tabindex="-1" role="dialog"  aria-hidden="true">
+                        <div class="modal fade" id="modal1-${p.idperson}" tabindex="-1" role="dialog"
+                             aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -163,7 +170,8 @@
                                             ${p.wifeinfo}
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -174,7 +182,7 @@
                 <td scope="col">${p.siblings}</td>
                 <td style="background-color: darkgrey" scope="col">
                     <a href="${pageContext.request.contextPath}/update/${p.idperson}">
-                    <img src="edit.jpg" alt="update"></a></td>
+                        <img src="edit.jpg" alt="update"></a></td>
             </tr>
             </tbody>
         </c:forEach>
@@ -206,7 +214,9 @@
                 <td>${f.filename}</td>
                     
                 <td><img src="data:image/jpg;base64,${f.base64Image}" width="100" height="100" alt="document"></td>
-                <td><a href="${pageContext.request.contextPath}/delete/${f.id}" style="color: red"><img src="delete.jpg" alt="delete"></a></td>
+                <td><a href="${pageContext.request.contextPath}/delete/${f.id}" style="color: red"><img src="delete.jpg"
+                                                                                                        alt="delete"></a>
+                </td>
             </tr>
             </tbody>
         </c:forEach>
@@ -220,7 +230,8 @@
 
     <div class="container">
         <div class="card-deck">
-            <a href="/buildtree" class="card text-white bg-primary card-body card-title big-button" >Continue Building</a>
+            <a href="/buildtree" class="card text-white bg-primary card-body card-title big-button">Continue
+                Building</a>
             <a href="/upload" class="card text-white bg-info card-body card-title big-button">Upload Documents</a>
         </div>
     </div>

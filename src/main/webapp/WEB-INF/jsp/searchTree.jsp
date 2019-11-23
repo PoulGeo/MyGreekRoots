@@ -30,6 +30,7 @@
         body {
             background-color: burlywood;
         }
+
         .big-button {
             text-decoration: none !important;
         }
@@ -37,7 +38,8 @@
         .container {
             width: 500px;
         }
-        .navbar{
+
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -79,7 +81,7 @@
         <a href="/home" class="btn btn-outline-success my-2 my-sm-0" type="button">Home</a>
         <a href="/aboutus" class="btn btn-outline-success my-2 my-sm-0" type="button">About Us</a>
         <a href="/search" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</a>
-        <a href="/seetree" class="btn btn-outline-success my-2 my-sm-0" type="button" >My Tree</a>
+        <a href="/seetree" class="btn btn-outline-success my-2 my-sm-0" type="button">My Tree</a>
         <a href="/chat" class="btn btn-outline-success my-2 my-sm-0" type="button">Chat</a>
         <a href="/logout" class="btn btn-outline-success my-2 my-sm-0" type="button">logout</a>
     </form>
@@ -110,10 +112,67 @@
             <tr>
                 <td scope="col">${p.name}</td>
                 <td style="background-color: darkgrey" scope="col">${p.dates}</td>
-                <td scope="col">${p.info}</td>
+                <td scope="col">
+
+                    <c:if test="${not empty p.info}">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modal-${p.idperson}">
+                            ReadMore
+                        </button>
+                        <div class="modal fade" id="modal-${p.idperson}" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">More Info</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                            ${p.info}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </c:if>
+
+                </td>
                 <td style="background-color: darkgrey" scope="col">${p.wife}</td>
                 <td scope="col">${p.wifedates}</td>
-                <td style="background-color: darkgrey" scope="col">${p.wifeinfo}</td>
+                <td style="background-color: darkgrey" scope="col">
+
+                    <c:if test="${not empty p.wifeinfo}">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modal1-${p.idperson}">
+                            ReadMore
+                        </button>
+                        <div class="modal fade" id="modal1-${p.idperson}" tabindex="-1" role="dialog"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">More Info</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                            ${p.wifeinfo}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </c:if>
+
+                </td>
                 <td scope="col">${p.siblings}</td>
 
             </tr>
