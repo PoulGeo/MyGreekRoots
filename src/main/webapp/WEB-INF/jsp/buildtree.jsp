@@ -59,8 +59,8 @@
                 <%--@elvariable id="person" type="com.roots.Roots.model"--%>
                 <spring:form modelAttribute="person" action="personForm" method="post">
                 <h2 class="text-center">Build Your Tree</h2>
-                <h3 class="hint-text">You have to add the person (father) of the exact previous generation, where you have left!
-                    <br> <br>  if you have not added anyone, then add your father in the form!</h3>
+                <h3 class="hint-text">if you have not added anyone, then add your father in the form!
+                    <br> <br> You have to add the person (father) of the exact previous generation, where you have left! </h3>
                 <br>
                 <div class="row">
                     <div class="col-md-6 col-xs-12">

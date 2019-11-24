@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -58,6 +59,11 @@
             color: #ccffcc;
 
         }
+        .error {
+            background-color: red;
+            color: white;
+            text-align: center;
+        }
 
     </style>
 
@@ -66,9 +72,16 @@
 <body>
 
 <p class="p">My Greek Roots</p>
-
+<c:if test="${error ne null}">
+    <div class="row">
+        <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2">
+            <h1 class="error">${error}</h1>
+        </div>
+    </div>
+</c:if>
 <div class="bslf">
     <form action="/dologin" method="post">
+
         <h2 class="text-center">Please login</h2>
         <div class="form-group">
             <input type="text" class="form-control" name="email" placeholder="Username" required="required">

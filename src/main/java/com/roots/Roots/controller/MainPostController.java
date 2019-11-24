@@ -26,7 +26,7 @@ public class MainPostController {
     ServiceS si;
 
     @PostMapping("/userform")
-    public String InsertDriverToDB(@ModelAttribute(name = "mUser") User u,
+    public String InsertUserToDB(@ModelAttribute(name = "mUser") User u,
                                    RedirectAttributes redirectAttributes) {
         String pw_hash = BCrypt.hashpw(u.getPassword(), BCrypt.gensalt());
 
@@ -45,7 +45,8 @@ public class MainPostController {
 
     @PostMapping("/dologin")
     public String dologin(@RequestParam("email") String email,
-                          @RequestParam("password") String password, HttpSession session) {
+                          @RequestParam("password") String password,
+                          HttpSession session, RedirectAttributes redirectAttributes) {
 
         User u = si.findUserByEmail(email);
 
@@ -59,9 +60,11 @@ public class MainPostController {
             return "agreements";
         } else if (BCrypt.checkpw(password, u.getPassword()) && u.getPayment().equals("ok")) {
             return "prebuild";
-        } else {
-            return "login";
+        } else if(!(BCrypt.checkpw(password, u.getPassword()) )){
+            redirectAttributes.addFlashAttribute("error", "Invalid Data");
+            return "redirect:/login";
         }
+        return "login";
 
     }
 

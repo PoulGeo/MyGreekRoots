@@ -25,9 +25,19 @@
 
     <style type="text/css">
         body {
-            background-image: url("https://pixnio.com/free-images/2017/07/24/2017-07-24-08-37-27-900x488.jpg");
+
+            background-image: url("https://www.oirizes.gr/wp-content/uploads/2017/12/background.png");
+            /* Full height */
+            height: 100%;
+
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+
+
+            font-size: 20px;
         }
 
         .bslf {
