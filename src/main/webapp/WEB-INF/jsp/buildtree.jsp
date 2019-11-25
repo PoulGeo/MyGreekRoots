@@ -58,54 +58,76 @@
             <div class="register-form">
                 <%--@elvariable id="person" type="com.roots.Roots.model"--%>
                 <spring:form modelAttribute="person" action="personForm" method="post">
-                <h2 class="text-center">Build Your Tree</h2>
-                <h3 class="hint-text">if you have not added anyone, then add your father in the form!
-                    <br> <br> You have to add the person (father) of the exact previous generation, where you have left! </h3>
-                <br>
-                <div class="row">
-                    <div class="col-md-6 col-xs-12">
-                        <div class="form-group">
-                            <spring:input path="name" type="text" name="name" class="form-control" placeholder="name"/>
-                        </div>
+                    <h2 class="text-center">Build Your Tree</h2>
+                    <h3 class="hint-text">Add your: </h3>
+                    <br>
+
+                    <div class="form-group">
+                        <label class="radio-inline">
+                            <spring:radiobutton path="type" value="father" required="required"/>Father
+                        </label>
+                        <label class="radio-inline">
+                            <spring:radiobutton path="type" value="grandfather" required="required"/>GrandFather
+                        </label>
+                        <label class="radio-inline">
+                            <spring:radiobutton path="type" value="gr1grandfather" required="required"/>Great-GrandFather
+                        </label> <br>
+                        <label class="radio-inline">
+                            <spring:radiobutton path="type" value="gr2grandfather" required="required"/>Great-Great-GrandFather
+                        </label>
+                        <label class="radio-inline">
+                            <spring:radiobutton path="type" value="gr3grandfather" required="required"/>Great-Great-Great-GrandFather
+                        </label>
+                        <label class="radio-inline">
+                            <spring:radiobutton path="type" value="gr4grandfather" required="required"/>Great-Great-Great-Great-GrandFather
+                        </label>
                     </div>
-                    <div class="col-md-6 col-xs-12">
+
+
+                        <div class="form-group">
+                            <spring:input path="name" type="text" name="name" class="form-control"
+                                          placeholder="name"/>
+                        </div>
                         <div class="form-group">
                             <spring:input type="text" path="dates" name="dates" class="form-control"
                                           placeholder="dates of birth - death"/>
                         </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <spring:input type="text" path="info" name="info" class="form-control" placeholder="more info"/>
-                </div>
-                <div class="form-group">
-                    <spring:input type="text" path="wife" name="wife" class="form-control" placeholder="wife's name"/>
-                </div>
-                <div class="form-group">
-                    <spring:input type="text" path="wifedates" name="wifedates" class="form-control"
-                                  placeholder="wife's dates of birth - death"/>
-                </div>
                     <div class="form-group">
-
-                    <spring:input type="text" path="wifeinfo" name="wifeinfo" class="form-control"
-                              placeholder="wife's more info"/>
+                        <spring:input type="text" path="info" name="info" class="form-control" placeholder="more info"/>
                     </div>
                     <div class="form-group">
-                <spring:input type="text" path="siblings" name="siblings" class="form-control"
-                              placeholder="siblings' name only"/>
-                </div>
+                        <spring:input type="text" path="wife" name="wife" class="form-control"
+                                      placeholder="wife's name"/>
+                    </div>
+                    <div class="form-group">
+                        <spring:input type="text" path="wifedates" name="wifedates" class="form-control"
+                                      placeholder="wife's dates of birth - death"/>
+                    </div>
+                    <div class="form-group">
 
-    <div class="row">
-        <div class="col-md-4 col-xs-12">
-            <div class="form-group">
-                <input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg" style="margin-left: auto" tabindex="8">
+                        <spring:input type="text" path="wifeinfo" name="wifeinfo" class="form-control"
+                                      placeholder="wife's more info"/>
+                    </div>
+                    <div class="form-group">
+                        <spring:input type="text" path="siblings" name="siblings" class="form-control"
+                                      placeholder="siblings' name only"/>
+
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12">
+                            <div class="form-group">
+                                <input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg"
+                                       style="margin-left: auto" tabindex="8">
+                            </div>
+                        </div>
+                    </div>
+                </spring:form>
             </div>
         </div>
     </div>
-    </spring:form>
-</div>
-</div>
-</div>
 </div>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 

@@ -24,7 +24,17 @@ public class Person {
   private long userid;
   @Column
   private String siblings;
+  @Column
+  private String type;
 
+
+  public String getType() {
+    return type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
 
   public long getIdperson() {
     return idperson;

@@ -58,9 +58,6 @@ public class MainGetController {
         return "searchTree";
     }
 
-
-
-
     @GetMapping("/login")
     public String loginPage() {
         return "login";

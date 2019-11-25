@@ -31,7 +31,9 @@
 <div id="chat-page" class="hidden">
     <div class="chat-container">
         <div class="chat-header">
-            <h2>Global Chat Box</h2>
+            <a href="/home" style="margin-left: 95%;">
+                <img src="exit.jpg" alt="exit" ></a>
+            <h2>MyGreekRoots Chat Box</h2>
         </div>
         <div class="connecting">Connecting...</div>
         <ul id="messageArea">
@@ -44,7 +46,6 @@
                            autocomplete="off" class="form-control" />
                     <button type="submit" class="primary">Send</button>
                     <br>
-                    <a href="/home" class="form-control" style=" border: 1px black solid; font-size: 17px; color: white; background-color: mediumseagreen; padding: 0.5%; margin-left: 90%;" >Exit</a>
 
                 </div>
             </div>

@@ -102,6 +102,7 @@
     <table class="table table-striped table-light" border="1" style="margin: auto; width: 70%;" bgcolor="white">
         <thead>
         <tr>
+            <th style="background-color: darkgrey">Role</th>
             <th>Name</th>
             <th style="background-color: darkgrey">Dates</th>
             <th>Info</th>
@@ -115,6 +116,7 @@
         <c:forEach items="${Person}" var="p">
             <tbody>
             <tr>
+                <td scope="col" style="background-color: darkgrey">${p.type}</td>
                 <td scope="col">${p.name}</td>
                 <td style="background-color: darkgrey" scope="col">${p.dates}</td>
 
