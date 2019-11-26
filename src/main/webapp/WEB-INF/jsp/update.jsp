@@ -55,6 +55,11 @@
                 <spring:form modelAttribute="personUpd" action="${pageContext.request.contextPath}/personFormUpd" method="post">
                 <h2 class="text-center">Build Your Tree</h2>
                 <p class="hint-text">Update here this person you have chosen!</p>
+
+                    <div class="form-group">
+                        <spring:input path="type" type="hidden" name="type" value="${p.type}" class="form-control"/>
+                    </div>
+
                 <div class="row">
                     <spring:input path="idperson" type="hidden" name="idperson" value="${p.idperson}" class="form-control"/>
 

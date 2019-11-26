@@ -1,6 +1,6 @@
-<%--suppress ALL --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!doctype html>
 <html lang="en">
@@ -11,8 +11,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MyGreekRoots</title>
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         body {
@@ -46,9 +54,11 @@
         }
 
         .error {
-            background-color: red;
-            color: white;
+
             text-align: center;
+            background-color: antiquewhite;
+            border: 1px  solid red;
+            color: black;
         }
     </style>
 </head>
@@ -56,14 +66,15 @@
 
 <p class="p">My Greek Roots</p>
 
-<div class="container">
-    <c:if test="${error ne null}">
-        <div class="row">
-            <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2">
-                <h1 class="error">${error}</h1>
-            </div>
+<c:if test="${error ne null}">
+    <div class="row">
+        <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2">
+            <h1 class="error">${error}</h1>
         </div>
-    </c:if>
+    </div>
+</c:if>
+
+<div class="container">
     <div class="row">
         <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2">
             <div class="register-form">
@@ -105,8 +116,6 @@
     </div>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 </body>
